@@ -29,7 +29,7 @@ function Get-Mac {
 
     $key = ConvertTo-ByteArray "YELLOW SUBMARINE"
     $b = ConvertTo-ByteArray "test message"
-    Get-MessageDigest -Key $k -BinaryMessage $b | ConvertTo-HexString
+    Get-Mac -Key $key -BinaryMessage $b | ConvertTo-HexString
 
 .INPUTS
 
